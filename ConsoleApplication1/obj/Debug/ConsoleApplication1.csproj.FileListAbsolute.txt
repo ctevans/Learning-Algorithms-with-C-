@@ -1,0 +1,6 @@
+C:\Users\Cole\Documents\CMPUT 366\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\Cole\Documents\CMPUT 366\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Users\Cole\Documents\CMPUT 366\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Cole\Documents\CMPUT 366\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Cole\Documents\CMPUT 366\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Cole\Documents\CMPUT 366\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
