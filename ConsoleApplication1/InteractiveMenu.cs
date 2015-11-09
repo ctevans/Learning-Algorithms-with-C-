@@ -98,6 +98,21 @@ namespace ConsoleApplication1
         }
 
 
+        //If the user wants to change configuration options then this method is called below.
+        private static void displayConfigOptions()
+        {
+            Console.WriteLine("~~CONFIGURATION OPTIONS MENU");
+            Console.WriteLine("Here is where you, the user, can modify the values used in the program");
+            Console.WriteLine(
+                "\n1: alpha             --Modify the alpha value" +
+                "\n2: gamma             --Modify the gamma value" +
+                "\n3: pi                --Modify the Epislon Pi value" +
+                "\n4: mu                --Modify the Epsilon Mu value");
+
+
+        }
+
+
 
         /* This is the core method called by main, this is going to orchestrate a cascade
          * of options, there are no calculations done here. Just a bunch of very simple
@@ -120,18 +135,18 @@ namespace ConsoleApplication1
 
                 //Output to console giving the user options. 
                 Console.WriteLine();
-                Console.WriteLine("This is the interactive menu, please enter a key to choose your option!");
-                Console.WriteLine("(Please put the input in EXACTLY as shown to the far left!)\n");
-                Console.WriteLine("Example: enter exactly \"expectedsarsa\" to choose that option! ");
-                Console.WriteLine("~~ALGORITHMS: ");
-                Console.WriteLine("1: expectedsarsa --See the various options for the Expected SARSA algorithm\n\n");
+                Console.WriteLine(
+                "This is the interactive menu, please enter a key to choose your option!" + 
+                "\n(Please put the input in EXACTLY as shown to the far left!)\n" + 
+                "\nExample: enter exactly \"expectedsarsa\" to choose that option! "+ 
+                "\n~~ALGORITHMS: "+
+                "\n1: expectedsarsa --See the various options for the Expected SARSA algorithm\n\n"+
 
-                Console.WriteLine("~~CONFIG:");
-                Console.WriteLine("2: config        --Configure the values presented to the algorithms here");
-                Console.WriteLine("3: printinc      -- Enter a whole number value of how many steps to take between prints");
-                Console.WriteLine("");
-                Console.WriteLine("4: printall      --Print all learned policies");
-                Console.WriteLine("5: q             --Quit");
+                "\n~~CONFIG:"+
+                "\n2: config        --Configure the values presented to the algorithms here"+
+                "\n3: printinc      -- Enter a whole number value of how many steps to take between prints"+
+                "\n4: printall      --Print all learned policies"+
+                "\n5: q             --Quit");
 
                 displayCurrentConfigurations();
 
