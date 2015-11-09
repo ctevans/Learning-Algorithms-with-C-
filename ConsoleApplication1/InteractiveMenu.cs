@@ -122,8 +122,11 @@ namespace ConsoleApplication1
                 // Bouncing around with the writer. Why? To get the formatting exactly as I desire.
                 // Furthermore this is the statement (the first) that will print out the current values in
                 // the string currentValueInformation.
-                string currentValueInformation = ("Number of trials taken " + Initializations.NumberOfTrials + 
-                    "");
+                string currentValueInformation = ("Number of trials taken                        -- " + Initializations.NumberOfTrials + 
+                    "\n\nAlpha      (Impact of difference in equation) -- " + Initializations.Alpha + 
+                    "\nGamma      (Reduction of future rewards     ) -- " + Initializations.Gamma + 
+                    "\nEpsilon MU (Likelihood of exploring behavior) -- " + Initializations.Epsilonmu +
+                    "\nEpsilon PI (Learning (target policy) param  ) -- " + Initializations.Epsilonpi);
                 Initializations.writer.WriteAt(currentValueInformation, 3, 20);
                 Initializations.writer.WriteAt("", 3, 13);
 
