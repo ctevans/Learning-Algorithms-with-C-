@@ -22,7 +22,7 @@ namespace ConsoleApplication1
         //iterated over in expectedSARSA! This models class holds this list... keeping it in place!
         //In c# integer arrays are set to 0 by default, I may try letting the user start this program
         //with some sort of "Optmistic policy" later but for now 0's. More fun can be added later when it works! :3
-        public static int[,] expectedSARSAList = new int[100, 4];
+        public static double[,] expectedSARSAList = new double[101, 4];
 
        
 
