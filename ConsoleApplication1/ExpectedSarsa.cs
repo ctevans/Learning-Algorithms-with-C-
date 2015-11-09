@@ -67,7 +67,7 @@ namespace ConsoleApplication1
             //Some mercy on the terminal console. Only printing every 1,000 steps.
             if (printFlag == true)
             {
-                Console.WriteLine("Trial" + trialNumber + " took: " + stepCount + " steps. And the return is: " + G);
+                Console.WriteLine("Trial" + trialNumber + " took: " + (stepCount-1) + " steps. And the return is: " + G);
             }
 
 

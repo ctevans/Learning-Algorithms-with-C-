@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="CompletionAnalysis.cs" />
     <Compile Include="ExpectedSarsa.cs" />
+    <Compile Include="GraphicalVisualizations.cs" />
     <Compile Include="Initializations.cs" />
     <Compile Include="InteractiveMenu.cs" />
     <Compile Include="Models.cs" />

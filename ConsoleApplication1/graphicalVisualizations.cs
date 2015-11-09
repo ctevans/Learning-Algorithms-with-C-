@@ -6,13 +6,16 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    class CompletionAnalysis
+    class GraphicalVisualizations
     {
-        static public void entireProgramComplete()
+        public static void viewGrid()
         {
             WriteAtClass writer = Initializations.writer;
             Console.Clear();
-            writer.WriteAt("Done...\n", 60, 60);
+            PrintFormat.initialPrint();
+            PrintFormat.firstAgentPrint(writer);
+            PrintFormat.statePrint(writer);
+            PrintFormat.initialPolicyPicks(writer);
         }
 
     }

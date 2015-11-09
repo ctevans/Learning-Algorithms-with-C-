@@ -8,6 +8,13 @@ namespace ConsoleApplication1
 {
     class Initializations
     {
+
+
+        //Instantiate a new WriteAtClass object and assign it start params
+        //Originally 4, -3
+        public static WriteAtClass writer = new WriteAtClass(4, -3);
+
+
         //Core algorithmic controller variables. 
         //gamma = the amount of 
         public static double gamma = 1;
