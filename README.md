@@ -1,6 +1,8 @@
 ## Learning-Algorithms-with-CSHARP
 Using C# as the language, I am going to make a grid-world and have a bunch of learning algorithms implemented! 
 
+#The world that the agent is interacting with!
+https://raw.githubusercontent.com/ctevans/Learning-Algorithms-with-CSHARP/master/ConsoleApplication1/image.png
 
 ## So what is this exactly?
 I wanted to have a program where I could test to my heart's content all of the learning algorithms I have learned.
