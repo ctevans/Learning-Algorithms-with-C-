@@ -22,10 +22,15 @@ namespace ConsoleApplication1
                 //Output to console giving the user options. 
                 Console.WriteLine();
                 Console.WriteLine("This is the interactive menu, please enter a key to choose your option!");
-                Console.WriteLine("(Please put the input in EXACTLY as shown to the far left!)");
+                Console.WriteLine("(Please put the input in EXACTLY as shown to the far left!)\n");
+
                 Console.WriteLine("es1m   --Run Expected SARSA for 1,000,000 episodes)");
                 Console.WriteLine("es100k -- Run Expected SARSA for 100,000 episodes");
-                Console.WriteLine("esclear -- Clear the current Q (THIS WILL LOSE LEARNING!)");
+                Console.WriteLine("esclear -- Clear the current Q (THIS WILL LOSE LEARNING!)\n");
+
+                Console.WriteLine("GRAPHICAL OPTIONS -- Choose these to view the grid in action!");
+                Console.WriteLine("esgraphical --Run the Expected SARSA algorithm in a grid!");
+                Console.WriteLine("             *Only prints grid, doesn't move yet!");
                 Console.WriteLine("printinc -- Enter a whole number value of how many steps to take between prints");
                 Console.WriteLine("             (Default is ~ 1,000 steps with a few starting positions)");
                 Console.WriteLine("Print all learned policies");
