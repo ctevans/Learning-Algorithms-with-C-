@@ -46,6 +46,7 @@
     <Compile Include="CompletionAnalysis.cs" />
     <Compile Include="ExpectedSarsa.cs" />
     <Compile Include="Initializations.cs" />
+    <Compile Include="InteractiveMenu.cs" />
     <Compile Include="Models.cs" />
     <Compile Include="Policies.cs" />
     <Compile Include="PrintFormat.cs" />

@@ -24,6 +24,13 @@ namespace ConsoleApplication1
         //with some sort of "Optmistic policy" later but for now 0's. More fun can be added later when it works! :3
         public static double[,] expectedSARSAList = new double[101, 4];
 
+        //Clear the entire SARSA list and set it back to 0!
+        //(Which is the C# default!)
+        public static void clearSARSAList()
+        {
+            expectedSARSAList = new double[101, 4];
+        }
+
        
 
 

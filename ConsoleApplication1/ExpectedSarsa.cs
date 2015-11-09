@@ -33,7 +33,7 @@ namespace ConsoleApplication1
             return x;
         }
 
-        public static void expectedSARSA()
+        public static void expectedSARSA(bool printFlag, int trialNumber)
         {
             int stepCount = 1;
             int G = 0; //Return begins at 0
@@ -63,7 +63,19 @@ namespace ConsoleApplication1
             {
                 //Console.WriteLine("We successfully hit the goal state in " + stepCount + " steps! :D!");
             }
-            Console.WriteLine(G);
+
+            //Some mercy on the terminal console. Only printing every 1,000 steps.
+            if (printFlag == true)
+            {
+                Console.WriteLine("Trial" + trialNumber + " took: " + stepCount + " steps. And the return is: " + G);
+            }
+
+
+
+
+            //reset step count
+            stepCount = 0;
+
 
         }
 

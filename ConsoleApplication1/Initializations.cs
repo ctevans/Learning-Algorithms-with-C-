@@ -20,13 +20,26 @@ namespace ConsoleApplication1
 
     
 
-        public static void beginExpectedSARSA()
+        public static void beginExpectedSARSA(string flag)
         {
-            int trials = 100000;
+            int trials = 0; //default, will never be used. Just to make Visualstudio happy.
+            if (flag == "es1m") { trials = 1000000; }
+            else if (flag == "es10k") { trials = 100000; };
 
+
+            //Fancy block where I use the number of trials chosen by the user in the menu to iterate.
+            //I send a print-flag and an integer after it to indicate if the algorithm is to print
+            //it's current round to the screen, and if it is then I hand it the trial number.
             for (int i = 0; i < trials; i++)
             {
-                ExpectedSarsa.expectedSARSA();
+                ExpectedSarsa.expectedSARSA(false, 0);
+
+                if (i % 1000 == 0 || i == 1 || i == 5 || i == 10 || i == 100 || i == 200 || i == 500 && i != 0)
+                {
+                    ExpectedSarsa.expectedSARSA(true, i);
+                }
+
+
             }
 
 

@@ -10,6 +10,7 @@ namespace ConsoleApplication1
     {
         static public void entireProgramComplete(WriteAtClass writer)
         {
+            Console.Clear();
             writer.WriteAt("Done...\n", 60, 60);
         }
 

@@ -8,8 +8,6 @@ namespace ConsoleApplication1
 {
     class Program 
     {
- 
-
         static void Main(string[] args)
         {
 
@@ -22,17 +20,8 @@ namespace ConsoleApplication1
             PrintFormat.statePrint(writer);
             PrintFormat.initialPolicyPicks(writer);
 
-            Initializations.beginExpectedSARSA();
-
-
-
-
-
-
-
-
-            //I want to now create all of the lists that will be utilized in this program! :)
-
+            InteractiveMenu.beginInteractiveMenu();
+            
 
 
 
