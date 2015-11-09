@@ -30,5 +30,5 @@ by the user (currently that requires me adding just a few more parameters to the
 With more learning algorithms implemented I think it would be very interesting to put them against eachother to see a host
 of statistics such as time to obtain an optimal policy! 
 
-*Spoilers(In the future I think it would be cool to expand this to make an AI-based Final Fantasy Tactics like game!)
+*Spoilers(In the future I think it would be cool to expand this to make an AI-based tactics game!)
 I mean, having two AI's battle it out in a world I created from the ground up sounds hilarious and fun!
