@@ -2,6 +2,10 @@
 Using C# as the language, I am going to make a grid-world and have a bunch of learning algorithms implemented! 
 
 #The world that the agent is interacting with!
+Just as a heads up, I plan to make it so that this environment can be expanded, have obstacles placed in it, have the
+agent move, have the goal move and other cool things. 
+(Example: Say we learn a great policy that works great for finding one goal! Move the goal and then run it again, how
+does that agent fare now!?)
 ![](https://raw.githubusercontent.com/ctevans/Learning-Algorithms-with-CSHARP/master/ConsoleApplication1/image.png)
 
 ## So what is this exactly?
