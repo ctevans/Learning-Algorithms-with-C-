@@ -82,6 +82,21 @@ namespace ConsoleApplication1
 
         }
 
+        private static void displayCurrentConfigurations()
+        {
+            // Bouncing around with the writer. Why? To get the formatting exactly as I desire.
+            // Furthermore this is the statement (the first) that will print out the current values in
+            // the string currentValueInformation.
+            string currentValueInformation = ("~~VALUES USED IN PROGRAM AT PRESENT"+ 
+                "\nNumber of trials taken                        -- " + Initializations.NumberOfTrials +
+                "\n\nAlpha      (Impact of difference in equation) -- " + Initializations.Alpha +
+                "\nGamma      (Reduction of future rewards     ) -- " + Initializations.Gamma +
+                "\nEpsilon MU (Likelihood of exploring behavior) -- " + Initializations.Epsilonmu +
+                "\nEpsilon PI (Learning (target policy) param  ) -- " + Initializations.Epsilonpi);
+            Initializations.writer.WriteAt(currentValueInformation, 3, 20);
+            Initializations.writer.WriteAt("", 3, 13);
+        }
+
 
 
         /* This is the core method called by main, this is going to orchestrate a cascade
@@ -118,17 +133,8 @@ namespace ConsoleApplication1
                 Console.WriteLine("4: printall      --Print all learned policies");
                 Console.WriteLine("5: q             --Quit");
 
+                displayCurrentConfigurations();
 
-                // Bouncing around with the writer. Why? To get the formatting exactly as I desire.
-                // Furthermore this is the statement (the first) that will print out the current values in
-                // the string currentValueInformation.
-                string currentValueInformation = ("Number of trials taken                        -- " + Initializations.NumberOfTrials + 
-                    "\n\nAlpha      (Impact of difference in equation) -- " + Initializations.Alpha + 
-                    "\nGamma      (Reduction of future rewards     ) -- " + Initializations.Gamma + 
-                    "\nEpsilon MU (Likelihood of exploring behavior) -- " + Initializations.Epsilonmu +
-                    "\nEpsilon PI (Learning (target policy) param  ) -- " + Initializations.Epsilonpi);
-                Initializations.writer.WriteAt(currentValueInformation, 3, 20);
-                Initializations.writer.WriteAt("", 3, 13);
 
                 //Obtain user input with a small prompt
                 Console.Write("\nPlease put your option here: ");
