@@ -51,7 +51,7 @@ namespace ConsoleApplication1
         {
             int epsilonRandom = Initializations.random.Next();
             
-            if (epsilonRandom > Initializations.epsilonmu) //GREEDY POLICY FOLLOWED
+            if (epsilonRandom > Initializations.Epsilonmu) //GREEDY POLICY FOLLOWED
             {
                 return (argMaxAction(state));
             }

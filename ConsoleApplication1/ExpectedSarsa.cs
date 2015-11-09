@@ -26,7 +26,7 @@ namespace ConsoleApplication1
             double maxActionValue = max(Models.expectedSARSAList[state2, 0], Models.expectedSARSAList[state2, 1], Models.expectedSARSAList[state2, 2],
                 Models.expectedSARSAList[state2, 3]);
 
-            double x = (1 - Initializations.epsilonpi) * maxActionValue + (Initializations.epsilonpi / 4) *
+            double x = (1 - Initializations.Epsilonpi) * maxActionValue + (Initializations.Epsilonpi / 4) *
                 (Models.expectedSARSAList[state2, 0] + Models.expectedSARSAList[state2, 1] + Models.expectedSARSAList[state2, 2] +
                 Models.expectedSARSAList[state2, 3]);
 
@@ -48,8 +48,8 @@ namespace ConsoleApplication1
 
                 //Equation for Expected Sarsa is here. I divided it into two bits because it was overly complex
                 //appearing. And that is something I would love to avoid here. 
-                Models.expectedSARSAList[state, action] = Models.expectedSARSAList[state, action] + Initializations.alpha * 
-                    (reward + Initializations.gamma * expectedQUnderEpsilonPi(state2) - (Models.expectedSARSAList[state, action]));
+                Models.expectedSARSAList[state, action] = Models.expectedSARSAList[state, action] + Initializations.Alpha * 
+                    (reward + Initializations.Gamma * expectedQUnderEpsilonPi(state2) - (Models.expectedSARSAList[state, action]));
 
 
 
