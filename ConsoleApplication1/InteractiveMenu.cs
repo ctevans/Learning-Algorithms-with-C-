@@ -84,15 +84,16 @@ namespace ConsoleApplication1
 
 
 
+        /* This is the core method called by main, this is going to orchestrate a cascade
+         * of options, there are no calculations done here. Just a bunch of very simple
+         * string filters.
+         */
         public static void beginInteractiveMenu()
         {
-
-
-
             //Need to initialize the string that will hold the user's console input.
             WriteAtClass writer = Initializations.writer;
             string input = "placeholder";
-            while (input != "q")
+            while (input != "q" || input == "5")
             {
                 //Clear the console to prevent it from getting too messy (and thus distracting).
                 Console.Clear();
@@ -111,11 +112,11 @@ namespace ConsoleApplication1
                 Console.WriteLine("1: expectedsarsa --See the various options for the Expected SARSA algorithm\n\n");
 
                 Console.WriteLine("~~CONFIG:");
-                Console.WriteLine("1: configure     --Configure the values presented to the algorithms here");
-                Console.WriteLine("2: printinc      -- Enter a whole number value of how many steps to take between prints");
+                Console.WriteLine("2: config        --Configure the values presented to the algorithms here");
+                Console.WriteLine("3: printinc      -- Enter a whole number value of how many steps to take between prints");
                 Console.WriteLine("                      (Default is ~ 1,000 steps with a few starting positions)");
-                Console.WriteLine("3: printall      --Print all learned policies");
-                Console.WriteLine("4: q             --Quit");
+                Console.WriteLine("4: printall      --Print all learned policies");
+                Console.WriteLine("5: q             --Quit");
 
                 //Obtain user input with a small prompt
                 Console.Write("\nPlease put your option here: ");
@@ -126,7 +127,7 @@ namespace ConsoleApplication1
                 //Now we have the various options, very simple if statement breakdown.
  
 
-                if (input == "printinc")
+                if (input == "printinc" || input == "3")
                 {
                     Console.Write("Please enter numeric value (And please not 0 or lower!): ");
                     string printIncString = Console.ReadLine();
@@ -136,25 +137,46 @@ namespace ConsoleApplication1
                     if (intParseSuccess == false)
                     {
                         Console.WriteLine("Sorry something went wrong when parsing that int. Try a number like 1000?");
+                        Console.Write("\nEnter any key to continue");
+                        Console.ReadLine();
                     }
                     if (intParseSuccess == true)
                     {
                         if (printIncInt <= 0)
                         {
+                            //Error: User put in a value below zero, inform them.
                             Console.WriteLine("Whoops! Number entered was below 1, please try a new positive integer!");
+                            Console.Write("\nEnter any key to continue");
+                            Console.ReadLine();
                         }
                         else
                         {
+                            //Confirm to the user that the number was modified.
                             Console.Write("Number changed! ");
                             Console.WriteLine(printIncInt);
+                            Console.Write("\nEnter any key to continue");
+                            Console.ReadLine();
                         }
                     }
 
                 }
 
-                else if (input == "expectedsarsa")
-                {
+                else if (input == "expectedsarsa" || input == "1")
+                { 
+                    // Just invoke the method that deals with that end of the menu.
                     expectedSARSAMenuOptions();
+                }
+
+                else if (input == "config" || input == "2")
+                {
+                    Console.Write("Sorry, option not here yet!\nEnter any key to continue");
+                    Console.ReadLine();
+                }
+
+                else if (input == "printall" || input == "4")
+                {
+                    Console.Write("Sorry, option not here yet!\nEnter any key to continue");
+                    Console.ReadLine();
                 }
 
             }
