@@ -68,7 +68,7 @@ namespace ConsoleApplication1
                 else if (input == "esgraphical")
                 {
                     GraphicalVisualizations.viewGrid();
-                    Console.Write("Success! Enter any key to continue");
+                    Console.Write("\nSuccess! Enter any key to continue");
                     Console.ReadLine();
                 }
 
@@ -117,6 +117,8 @@ namespace ConsoleApplication1
                 Console.WriteLine("3: printall      --Print all learned policies");
                 Console.WriteLine("4: q             --Quit");
 
+                //Obtain user input with a small prompt
+                Console.Write("\nPlease put your option here: ");
                 input = Console.ReadLine();
 
 
