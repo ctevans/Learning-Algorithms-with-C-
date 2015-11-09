@@ -1,6 +1,12 @@
 ## Learning-Algorithms-with-CSHARP
 Using C# as the language, I am going to make a grid-world and have a bunch of learning algorithms implemented! 
 
+#The world that the agent is interacting with!
+Just as a heads up, I plan to make it so that this environment can be expanded, have obstacles placed in it, have the
+agent move, have the goal move and other cool things. 
+(Example: Say we learn a great policy that works great for finding one goal! Move the goal and then run it again, how
+does that agent fare now!?)
+![](https://raw.githubusercontent.com/ctevans/Learning-Algorithms-with-CSHARP/master/ConsoleApplication1/image.png)
 
 ## So what is this exactly?
 I wanted to have a program where I could test to my heart's content all of the learning algorithms I have learned.
@@ -24,5 +30,5 @@ by the user (currently that requires me adding just a few more parameters to the
 With more learning algorithms implemented I think it would be very interesting to put them against eachother to see a host
 of statistics such as time to obtain an optimal policy! 
 
-*Spoilers(In the future I think it would be cool to expand this to make an AI-based Final Fantasy Tactics like game!)
+*Spoilers(In the future I think it would be cool to expand this to make an AI-based tactics game!)
 I mean, having two AI's battle it out in a world I created from the ground up sounds hilarious and fun!
