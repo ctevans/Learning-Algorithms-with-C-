@@ -119,30 +119,92 @@ namespace ConsoleApplication1
                 displayCurrentConfigurations();
 
                 Console.Write("Please enter your choice here:");
-                input = Console.ReadLine();
+                input = Console.ReadLine().Trim();
 
                 if (input == "1" || input == "alpha")
                 {
                     // Get user input, transform into int
                     Console.Write("Please enter the new alpha value: ");
                     string alphaModificationString = Console.ReadLine();
-                    int alphaModification = int.Parse(alphaModificationString);
+                    try
+                    {
+                        double alphaModification = double.Parse(alphaModificationString);
+                        // Assign reference alpha to this value.
+                        Initializations.Alpha = alphaModification;
+                    }
+                    catch (System.OverflowException)
+                    {
+                        Console.WriteLine("Overflow occured, number was too large or small. Press any key to continue");
+                        Console.ReadKey();
+                    }
 
-                    // Assign reference alpha to this value.
-                    Initializations.Alpha = alphaModification;
                 }
 
                 else if (input == "2" || input == "gamma")
                 {
-                    // Get user input, transform into int
-                    Console.Write("Please enter the new alpha value: ");
-                    string gammaModificationString = Console.ReadLine();
-                    int gammaModification = int.Parse(gammaModificationString);
 
-                    //Assign reference gamma to this value.
-                    Initializations.Gamma = gammaModification;
+                        // Get user input, transform into doubledouble
+                        Console.Write("Please enter the new gamma value: ");
+                        string gammaModificationString = Console.ReadLine();
+                    try
+                    {
+                        //Attempt to parse the int, if it fails we catch the error gracefully.
+                        double gammaModification = double.Parse(gammaModificationString);
+
+                        //Assign reference gamma to this value.
+                        Initializations.Gamma = gammaModification;
+                    }
+                    catch (System.OverflowException)
+                    {
+                        Console.WriteLine("Overflow occured, number was too large or small. Press any key to continue");
+                        Console.ReadKey();
+                    }
                 }
 
+
+                else if (input == "3" || input == "pi")
+                {
+                    // Get user input, transform into int
+                    Console.Write("Please enter the new pi value: ");
+
+
+                    string piModificationString = Console.ReadLine();
+                    try
+                    {
+
+                    double piModification = double.Parse(piModificationString);
+
+                    //Assign reference gamma to this value.
+                    Initializations.Epsilonpi = piModification;
+                    }
+                    catch (System.OverflowException)
+                    {
+                        Console.WriteLine("Overflow occured, number was too large or small. Press any key to continue");
+                        Console.ReadKey();
+                    }
+                }
+
+                else if (input == "4" || input == "mu")
+                {
+                    // Get user input, transform into int
+                    Console.Write("Please enter the new mu value: ");
+                    try
+                    {
+                    string muModificationString = Console.ReadLine();
+                    double muModification = double.Parse(muModificationString);
+
+                    //Assign reference gamma to this value.
+                    Initializations.Epsilonmu = muModification;
+
+                    }
+                    catch (System.OverflowException)
+                    {
+                        Console.WriteLine("Overflow occured, number was too large or small. Press any key to continue");
+                        Console.ReadKey();
+                    }
+                }
+
+                //User quit option chosen.
                 else if (input == "5" || input == "back")
                 {
                     return;
@@ -190,7 +252,7 @@ namespace ConsoleApplication1
 
                 //Obtain user input with a small prompt
                 Console.Write("\nPlease put your option here: ");
-                input = Console.ReadLine();
+                input = Console.ReadLine().Trim();
 
 
 
