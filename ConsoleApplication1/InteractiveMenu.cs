@@ -95,19 +95,62 @@ namespace ConsoleApplication1
                 "\nEpsilon PI (Learning (target policy) param  ) -- " + Initializations.Epsilonpi);
             Initializations.writer.WriteAt(currentValueInformation, 3, 20);
             Initializations.writer.WriteAt("", 3, 13);
+
+            //string input = 
         }
 
 
         //If the user wants to change configuration options then this method is called below.
         private static void displayConfigOptions()
         {
-            Console.WriteLine("~~CONFIGURATION OPTIONS MENU");
-            Console.WriteLine("Here is where you, the user, can modify the values used in the program");
-            Console.WriteLine(
-                "\n1: alpha             --Modify the alpha value" +
-                "\n2: gamma             --Modify the gamma value" +
-                "\n3: pi                --Modify the Epislon Pi value" +
-                "\n4: mu                --Modify the Epsilon Mu value");
+            string input = "Placeholder"; 
+            while (input != "5" || input != "back")
+            {
+                Console.Clear();
+                Console.WriteLine("~~CONFIGURATION OPTIONS MENU");
+                Console.WriteLine(
+                    "Here is where you, the user, can modify the values used in the program\n" +
+                    "\n1: alpha             --Modify the alpha value" +
+                    "\n2: gamma             --Modify the gamma value" +
+                    "\n3: pi                --Modify the Epislon Pi value" +
+                    "\n4: mu                --Modify the Epsilon Mu value"+
+                    "\n5: back              --Return to previous screen");
+
+                displayCurrentConfigurations();
+
+                Console.Write("Please enter your choice here:");
+                input = Console.ReadLine();
+
+                if (input == "1" || input == "alpha")
+                {
+                    // Get user input, transform into int
+                    Console.Write("Please enter the new alpha value: ");
+                    string alphaModificationString = Console.ReadLine();
+                    int alphaModification = int.Parse(alphaModificationString);
+
+                    // Assign reference alpha to this value.
+                    Initializations.Alpha = alphaModification;
+                }
+
+                else if (input == "2" || input == "gamma")
+                {
+                    // Get user input, transform into int
+                    Console.Write("Please enter the new alpha value: ");
+                    string gammaModificationString = Console.ReadLine();
+                    int gammaModification = int.Parse(gammaModificationString);
+
+                    //Assign reference gamma to this value.
+                    Initializations.Gamma = gammaModification;
+                }
+
+                else if (input == "5" || input == "back")
+                {
+                    return;
+                }
+
+
+            }
+ 
 
 
         }
@@ -128,13 +171,7 @@ namespace ConsoleApplication1
                 //Clear the console to prevent it from getting too messy (and thus distracting).
                 Console.Clear();
 
-                bool printGrid = false;
-                string printStepSize = "";
-
-                
-
                 //Output to console giving the user options. 
-                Console.WriteLine();
                 Console.WriteLine(
                 "This is the interactive menu, please enter a key to choose your option!" + 
                 "\n(Please put the input in EXACTLY as shown to the far left!)\n" + 
@@ -205,7 +242,7 @@ namespace ConsoleApplication1
 
                 else if (input == "config" || input == "2")
                 {
-                    Console.Write("Sorry, option not here yet!\nEnter any key to continue");
+                    displayConfigOptions();
                     Console.ReadLine();
                 }
 
