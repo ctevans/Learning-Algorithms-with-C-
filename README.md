@@ -1,6 +1,8 @@
 ## Learning-Algorithms-with-CSHARP
 Using C# as the language, I am going to make a grid-world and have a bunch of learning algorithms implemented! 
 
+Currently this project has been stopped due to a larger project demanding my attention. 
+
 #The world that the agent is interacting with!
 Just as a heads up, I plan to make it so that this environment can be expanded, have obstacles placed in it, have the
 agent move, have the goal move and other cool things. 
